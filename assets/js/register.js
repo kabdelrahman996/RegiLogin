@@ -13,7 +13,6 @@ let users = JSON.parse(localStorage.getItem("users")) || [];
 // function to add the users to the localStorage
 function updateUsers() {
     localStorage.setItem("users", JSON.stringify(users));
-    console.log(users);
 }
 
 // function to check if emaial is already exist
@@ -103,7 +102,6 @@ regBtn.addEventListener("click", () => {
         event.preventDefault();
         let isReuired = checkFields();
         let isValid = checkValidation();
-        console.log(isReuired);
         if (!isReuired && isValid) { 
             if (checkEmail()) {
                 regSucceed();
